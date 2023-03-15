@@ -1,0 +1,24 @@
+{
+  "name": "goit-js-hw-09",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://krzysztofrozbicki.github.io/goit-js-hw-09",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html --public-url /goit-js-hw-09/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KrzysztofRozbicki/goit-js-hw-09.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KrzysztofRozbicki/goit-js-hw-09/issues"
+  },
+  "homepage": "https://github.com/KrzysztofRozbicki/goit-js-hw-09#readme",
+  "devDependencies": {
+    "parcel": "^2.8.3"
+  }
+}

@@ -1,3 +1,14 @@
+#Junk
+.DS_Store
+.vscode/
+.idea/
+
+#parcelcache
+.parcel-cache
+
+#package-lock
+.package-lock.json
+
 # Logs
 logs
 *.log
