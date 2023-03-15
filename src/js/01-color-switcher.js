@@ -2,6 +2,8 @@ const startButton = document.querySelector('[data-start]');
 const stopButton = document.querySelector('[data-stop]');
 let changeColor = null;
 
+document.getElementById
+
 const getRandomHexColor = () =>
   (document.body.style.backgroundColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`);
 
