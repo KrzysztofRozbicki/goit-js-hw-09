@@ -17,22 +17,53 @@ img {
   max-width: 100%;
 }
 
-[data-start],
-[data-stop] {
+button {
+  background-color: black;
+  color: white;
+  font-size: 1.5rem;
   width: 10rem;
   height: 5rem;
-  position: relative;
-  left: 50vw;
-  top: 40vh;
-  transform: translateX(-50%);
   outline: transparent;
   border: transparent;
   border-radius: 1rem;
 }
 
-[data-start]:hover,
-[data-stop]:hover {
+button:hover,
+button:disabled {
+  background-color: #444;
   cursor: pointer;
   scale: 0.95;
-  box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.23);
+  box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.23);
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+#datetime-picker {
+  width: 12rem;
+  height: 4rem;
+  border-radius: 1rem;
+  font-size: 1rem;
+  padding: 1rem;
+}
+
+.timer {
+  margin-top: 2rem;
+  display: flex;
+  font-size: 1.25rem;
+  text-align: center;
+  gap: 1rem;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  width: 8rem;
+  padding: 1rem;
+}
+
+.value {
+  font-size: 3rem;
+  font-weight: bold;
 }
