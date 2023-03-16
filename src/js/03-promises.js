@@ -17,7 +17,6 @@ const createPromise = (position, delay) => {
 };
 
 const showPromise = (count, delay, time, current = 1) => {
-  time = +time;
   if (current - 1 >= count) return;
   createPromise(current, time)
     .then(success => Notiflix.Notify.success(success))
@@ -28,5 +27,5 @@ const showPromise = (count, delay, time, current = 1) => {
 
 buttonEl.addEventListener('click', event => {
   event.preventDefault();
-  setTimeout(() => showPromise(amountEl.value, stepEl.value, delayEl.value), delayEl.value);
+  setTimeout(() => showPromise(amountEl.value, stepEl.value, +delayEl.value), delayEl.value);
 });
