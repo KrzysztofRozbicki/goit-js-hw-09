@@ -16,16 +16,16 @@ const createPromise = (position, delay) => {
   });
 };
 
-const showPromise = (count, delay, time, current = 1) => {
-  if (current - 1 >= count) return;
+const showPromise = (amount, step, time, current = 1) => {
+  if (current - 1 >= amount) return;
   createPromise(current, time)
     .then(success => Notiflix.Notify.success(success))
     .catch(error => Notiflix.Notify.failure(error));
-  time += +delay;
-  setTimeout(() => showPromise(count, delay, time, current + 1), delay);
+  time += step;
+  setTimeout(() => showPromise(amount, step, time, current + 1), step);
 };
 
 buttonEl.addEventListener('click', event => {
   event.preventDefault();
-  setTimeout(() => showPromise(amountEl.value, stepEl.value, +delayEl.value), delayEl.value);
+  setTimeout(() => showPromise(+amountEl.value, +stepEl.value, +delayEl.value), +delayEl.value);
 });
