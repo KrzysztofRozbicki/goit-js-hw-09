@@ -17,7 +17,7 @@ const createPromise = (position, delay) => {
 };
 
 const showPromise = (amount, step, time, current = 1) => {
-  if (current - 1 >= amount) return;
+  if (current > amount) return;
   createPromise(current, time)
     .then(success => Notiflix.Notify.success(success))
     .catch(error => Notiflix.Notify.failure(error));
