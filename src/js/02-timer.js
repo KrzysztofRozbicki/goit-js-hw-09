@@ -82,6 +82,7 @@ const options = {
   minuteIncrement: 1,
   onClose(selectedDates) {
     pickedDate = selectedDates[0].getTime();
+    millisecondsLeft = pickedDate - new Date().getTime();
     if (millisecondsLeft < 0)
       return Notiflix.Report.failure(
         'Please choose a date in the future',
